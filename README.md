@@ -1,7 +1,7 @@
 - 👋 Hi, I’m Wellington @Well-Mart
-- 👀 I’m interested in Learning all about programming and philosophy.
-- 🌱 I’m currently learning Computer Programing College at Niagara College Toronto.
-- 💞️ I want to collaborate on AI projects and Web/Mobile apps.
+- 👀 I’m interested in Learning all about music, programming, philosophy, and Star Wars.
+- 🌱 I’m currently studying Computer Programming.
+- 💞️ I want to collaborate on Data Analysis and Web apps.
 - 📫 How to reach me here: wellington.martins.silva@gmail.com.
 
 <!---
