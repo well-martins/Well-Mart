@@ -1,4 +1,4 @@
-- 👋 Hi, I’m Wellington @Well-Mart
+- 👋 Hi, I’m Wellington @well-martins
 - 👀 I’m interested in Learning all about music, programming, philosophy, and Star Wars.
 - 🌱 I’m currently studying Computer Programming.
 - 💞️ I want to collaborate on Data Analysis and Web apps.
