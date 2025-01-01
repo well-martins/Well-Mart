@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - iPortfolio Bootstrap Template</title>
+  <title>Wellington Martins Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -52,9 +52,9 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="https://github.com/well-martins" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/wellington-msilva/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.instagram.com/wellington_martins/" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://github.com/well-martins" class="github" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/wellington-msilva/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.instagram.com/wellington_martins/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -90,106 +90,134 @@
   <main class="main">
 
     <!-- Hero Section -->
-<!-- Hero Section -->
-<section id="hero" class="hero section dark-background" style="position: relative;">
-
-  <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="" style="width: 100%; height: auto;">
-
-  <div class="container" data-aos="fade-up" data-aos-delay="50">
-    <h2>Wellington Martins</h2>
-    <p>I'm <span class="typed" data-typed-items="Engineer, Data Analyst, Developer">Long Life Learner . . .</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-  </div>
-
-  <div class="caption" style="text-align: center; color: white; position: absolute; bottom: 10px; width: 100%; z-index: 1;">
-    <p>Leia and Poppy at Eglington Park</p>
-  </div>
-
-</section><!-- /Hero Section -->
+    <section id="hero" class="hero section dark-background" style="position: relative;">
+      <!-- Background picturre -->
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="" style="width: 100%; height: auto;">
+      <!-- My description animation -->
+      <div class="container" data-aos="fade-up" data-aos-delay="50">
+        <h2>Wellington Martins</h2>
+        <p>I'm <span class="typed" data-typed-items="Engineer, Data Analyst, Developer, Lifelong Learner.">Curious.</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+      <!-- Picture caption -->
+      <div class="caption" style="text-align: center; color: white; position: absolute; bottom: 10px; width: 100%; z-index: 1;">
+        <p>Leia and Poppy at Eglington Park, Toronto, 2024.</p>
+      </div>
+    </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
-
+    <section id="about" class="about section" style="padding-bottom: 10px;">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>[My Career Identity - TBD]</p>
+        <h2>My Career Identity</h2>
+        <p>I'm a <span style="font-weight: bold;">results-oriented</span> 
+          <i>Electronic Engineer and Data Analyst</i> 
+          with a strong foundation in <span style="font-weight: bold;">Continuous Improvement and Programming.</span></p>
+       <p>With over 25 years of experience in the industry, I excel at 
+          <span style="font-weight: bold;">streamlining processes</span>, 
+          leading projects, and fostering high-performing teams.</p>
+       <p>I'm passionate about using data to drive 
+          <span style="font-weight: bold;">impactful improvements</span> 
+          and create positive work environments.</p>
+       <p>My values of 
+          <span style="color: #EA4335;">Respect</span>, 
+          <span style="color: #34A853;">Inclusion</span>, 
+          <span style="color: #FBBC05;">Curiosity</span>, 
+          and 
+          <span style="color: #4285F4;">Realization</span> 
+          guide my approach to every challenge.</p>
+       <p>I thrive in collaborative settings and am eager to contribute my expertise to 
+          organizations 
+          <span style="font-weight: bold;">prioritizing innovation and employee growth</span>.</p>
+
       </div><!-- End Section Title -->
-
+      <!-- Picture and details section -->
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
+        <div class="row gt-4 justify-content-center">
           <div class="col-lg-4">
             <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 content">
-            <h2>Industrial Processess Engineer &amp; Data Analyst</h2>
-            <p class="fst-italic py-3">
-              [Main Skills]
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
+            <h2>Process Engineer &amp; Data Analyst</h2>
+            <br><br>
+            <div class="row mb-0">
+              <div class="col-lg-5">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>5 June 1985</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://well-martins.github.io/">well-martins.github.io</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span id="birthday">5 June 1985</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age"></span></li>
+                      <!-- Calculating the age -->
+                      <script>
+                        function calculateAge(birthday) {
+                          const birthDate = new Date(birthday);
+                          const today = new Date();
+                          let age = today.getFullYear() - birthDate.getFullYear();
+                          const monthDifference = today.getMonth() - birthDate.getMonth();
+                          if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                            age--;
+                          }
+                          return age;
+                        }
+                        const birthdayText = document.getElementById('birthday').textContent;
+                        const birthDate = new Date(birthdayText);
+                        document.getElementById('age').textContent = calculateAge(birthDate);
+                      </script>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://well-martins.github.io/">well-martins at GitHub</a></span></li>
                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span></span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Ontario, Canada</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Toronto, Ontario <img src="assets/img/canada-flag.png" alt="Canada Flag" style="width: 20px; height: auto; vertical-align: middle;"></span></li>
                 </ul>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-7">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>39</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor Eng.</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degrees:</strong> <span>Bachelors in Electronic Engineering (GPA 3.56) <br>Diploma in Computer Programming (GPA 3.70)</span></li>
                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span></span></li> -->
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li> -->
+                  <li><i class="bi bi-chevron-right"></i> <strong>Currently:</strong> <span>Data and Machining Techinician at <br><a href="https://www.tayco.com/" target="_blank">Tayco Office Furnishings Inc.</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Hobbies:</strong><span>Philososhy, NFL and Star Wars.</span>
                 </ul>
               </div>
             </div>
-            <p class="py-3">
+            <p class="pt-3">
+              <strong>Important Certifications:</strong>
+            </p>
+            <p >
               [Brief descriprion of current activities]
             </p>
           </div>
         </div>
-
       </div>
-
     </section><!-- /About Section -->
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
+    <section id="stats" class="stats section p-0">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
+        <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
+              <i class="bi bi-emoji-smile">+</i>
+              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Years of Experience</strong> <span>in different segments of industry and third sector.</span></p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
+              <i class="bi bi-rocket-takeoff"></i>
+              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Companies</strong> <span>among Electronics, Transportation, Mining, Office Furniture, Education, and Retail.</span></p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
+              <i class="bi bi-chat-right-text">+</i>
+              <span data-purecounter-start="0" data-purecounter-end="650" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours of Training</strong> <span>delivering personalized content of Continuous Improvement and Leadership</span></p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
+              <i class="bi bi-people">+</i>
+              <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>People</strong> <span>trained in Lean, Process or Management concepts ans tools.</span></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -201,65 +229,95 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
+      <!-- SKILLS BARS Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Skills [Under Construction]</h2>
+        <p>By embracing lifelong learning, you cultivate a growth mindset and unlock your true potential. Skill development fuels success.</p>
       </div><!-- End Section Title -->
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
+          <div class="col-lg-3">
             <div class="progress">
               <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
-
             <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+              <span class="skill"><span>CSS</span> <i class="val">100%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
-
             <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+              <span class="skill"><span>JavaScript</span> <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
-
           </div>
 
-          <div class="col-lg-6">
-
+          <div class="col-lg-3">
             <div class="progress">
               <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
-
             <div class="progress">
               <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
-
             <div class="progress">
               <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
+          </div>
 
+          <div class="col-lg-3">
+            <div class="progress">
+              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+          </div>
+
+          <div class="col-lg-3">
+            <div class="progress">
+              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
           </div>
 
         </div>
@@ -273,7 +331,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
+        <h2>Resume [Sample - Under Construction]</h2>
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div><!-- End Section Title -->
 
@@ -348,9 +406,9 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section light-background">
 
-      <!-- Section Title -->
+      <!-- Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2>Portfolio [Sample - Under Construction]</h2>
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div><!-- End Section Title -->
 
@@ -525,7 +583,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
+        <h2>Testimonials  [Sample - Under Construction]</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
@@ -637,8 +695,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Contact [Under Construction]</h2>
+        <p>Feel Free to contact me under my contact details or through my profession social media</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -652,27 +710,27 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Toronto, Ontario, CA M4P 0C9</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <h3>Call Me</h3>
+                  <p>+1 437 223 8152</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <h3>Email Me</h3>
+                  <p>wellington.martins.silva@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.2160142269854!2d-79.40083643745824!3d43.71141362097902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3323ebe291df%3A0x18e8ffcc0fc51e5a!2sToronto%2C%20ON%20M4P%200C9!5e1!3m2!1spt-BR!2sca!4v1735697495382!5m2!1spt-BR!2sca" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
 
